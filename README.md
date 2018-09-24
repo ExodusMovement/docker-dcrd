@@ -19,4 +19,4 @@ Branches and releases:
 
 ### Run example
 
-> docker run -v /mnt/SSD-EVO/dcrd-main:/data -e "DIGIBYTED_ARGUMENTS=--datadir=/data" dcrd
+> docker run -v /mnt/SSD-EVO/dcrd-main:/data -e "DCRD_ARGUMENTS=--datadir=/data" dcrd

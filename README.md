@@ -8,8 +8,8 @@ Every new dcrd release have own branch where branch name is dcrd version. For ea
 
 Branches and releases:
 
- - [6.16.3](https://github.com/ExodusMovement/docker-dcrd/tree/1.3.0)
-   - [6.16.3-001](https://github.com/ExodusMovement/docker-dcrd/tree/1.3.0-001)
+ - [1.3.0](https://github.com/ExodusMovement/docker-dcrd/tree/1.3.0)
+   - [1.3.0-001](https://github.com/ExodusMovement/docker-dcrd/tree/1.3.0-001)
 
 ## Usage
 

@@ -7,7 +7,7 @@ WORKDIR /dcrd
 
 RUN CGO_ENABLED=0 GOOS=linux GO111MODULE=on go install . ./cmd/...
 
-FROM alpine:3.6
+FROM alpine:3.8
 
 RUN apk add --no-cache ca-certificates
 COPY --from=builder /go/bin/* /bin/

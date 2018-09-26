@@ -2,7 +2,7 @@ FROM golang:1.11 as builder
 
 ENV BUILD_TAG 1.3.0
 
-RUN wget -qO- https://github.com/decred/dcrd/archive/release-v$BUILD_TAG.tar.gz | tar xz && mv ./dcrd-release-v$BUILD_TAG /dcrd
+RUN wget -O- https://github.com/decred/dcrd/archive/release-v$BUILD_TAG.tar.gz | tar xz && mv ./dcrd-release-v$BUILD_TAG /dcrd
 WORKDIR /dcrd
 
 RUN CGO_ENABLED=0 GOOS=linux GO111MODULE=on go install . ./cmd/...
@@ -10,7 +10,7 @@ RUN CGO_ENABLED=0 GOOS=linux GO111MODULE=on go install . ./cmd/...
 FROM alpine:3.8
 
 RUN apk add --no-cache ca-certificates
-COPY --from=builder /go/bin/* /bin/
+COPY --from=builder /go/bin/dcrctl /go/bin/dcrd /usr/local/bin/
 
 RUN addgroup -g 1000 dcrd \
   && adduser -u 1000 -G dcrd -s /bin/sh -D dcrd

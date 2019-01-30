@@ -12,6 +12,7 @@ Branches and releases:
    - [1.3.0-001](https://github.com/ExodusMovement/docker-dcrd/tree/1.3.0-001)
    - [1.3.0-002](https://github.com/ExodusMovement/docker-dcrd/tree/1.3.0-002)
    - [1.3.0-003](https://github.com/ExodusMovement/docker-dcrd/tree/1.3.0-003)
+   - [1.3.0-004](https://github.com/ExodusMovement/docker-dcrd/tree/1.3.0-004)
 
 ## Usage
 

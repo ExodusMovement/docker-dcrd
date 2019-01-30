@@ -2,7 +2,7 @@ FROM golang:1.11 as builder
 
 ENV BUILD_TAG 1.3.0
 
-RUN wget -O- https://github.com/decred/dcrd/archive/release-v$BUILD_TAG.tar.gz | tar xz && mv ./dcrd-release-v$BUILD_TAG /dcrd
+RUN wget -O- https://github.com/decred/dcrd/archive/v$BUILD_TAG.tar.gz | tar xz && mv ./dcrd-$BUILD_TAG /dcrd
 WORKDIR /dcrd
 
 RUN CGO_ENABLED=0 GOOS=linux GO111MODULE=on go install . ./cmd/...
